@@ -24,12 +24,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshoots/nft-card.png)
-![](./screenshoots/nft-card-hover.png)
+![](./screenshoots/nft-card.png =250x250)
+![](./screenshoots/nft-card-hover.png =250x250)
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://ssalopek.github.io/frontendmentor-nft-preview-card/]
 
 ## My process
 
