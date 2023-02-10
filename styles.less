@@ -1,0 +1,123 @@
+@import "./reset.less";
+
+@color-primary-blue: hsl(215, 51%, 70%);
+@color-primary-cyan: rgb(0, 255, 247);
+@color-white: hsl(0, 0%, 100%);
+@color-blue-main-bg: hsl(217, 54%, 11%);
+@color-blue-card-bg:  hsl(216, 50%, 16%);
+@color-blue-line: hsl(215, 32%, 27%);
+
+@font-300: 300;
+@font-400: 400;
+@font-600: 600;
+
+@font-outfit: 'Outfit', sans-serif;
+
+h1 {
+    font-size: 1.55rem;
+}
+
+body {
+    font-family: @font-outfit;
+    background: @color-blue-main-bg;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    max-width: 23rem;
+    background: @color-blue-card-bg;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    font-size: 1.13rem;
+    
+    picture {
+        position: relative;
+        &:hover,
+        &:focus {
+            &:before,
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                cursor: pointer;
+            }
+            &:before {
+                width: 100%;
+                height: 100%;
+                top: 0;
+                background: @color-primary-cyan;
+                opacity: 50%;
+            }
+            &:after {
+                content: '';
+                background: url("./images/icon-view.svg") no-repeat;
+                width: 3rem;
+                height: 3rem;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+    .nft-logo {
+        max-width: 20rem;
+        border-radius: 0.75rem;
+        margin: 0 auto;
+    }
+    .title {
+        color: @color-white;
+    }
+    .description {
+        color: @color-primary-blue;
+        font-weight: @font-300;
+    }
+    .price-time-wrapper {
+        display: flex;
+        column-gap: 0.5rem;
+        .price {
+            color: @color-primary-cyan;
+            flex-grow: 1;
+        }
+        .time {
+            color: @color-primary-blue;
+        }
+        img {
+            object-fit: contain;
+        }
+    }
+    hr {
+        border-color: @color-blue-line;
+    }
+    .author-wrapper {
+        display: flex;
+        align-items: center;
+        column-gap: 1rem;
+        img {
+            max-width: 2.5rem;
+            border: 1px solid @color-white;
+            border-radius: 50%;
+        }
+        .author {
+            color: @color-primary-blue;
+            font-weight: @font-300;
+            &-bold {
+                color: @color-white;
+            }
+        }
+    }
+    .title,
+    .author-bold {
+        &:hover,
+        &:focus {
+            color: @color-primary-cyan;
+            cursor: pointer;
+        }
+    }
+}
